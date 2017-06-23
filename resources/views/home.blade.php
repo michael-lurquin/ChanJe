@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    @if (Auth::check())
+                        Vous êtes <strong>{{ Auth::user()->fullName() }}</strong> et vous avez le rôle <strong>{{ Auth::user()->getRole() }}</strong>
+                    @endif
                 </div>
             </div>
         </div>
