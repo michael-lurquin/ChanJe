@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Manage roles
+Route::get('/roles', 'RoleController@index')->name('roles');
+Route::post('/roles', 'RoleController@store');
+Route::put('/roles/{role}', 'RoleController@update');
+Route::get('/roles/{role}', 'RoleController@destroy');
+Route::post('/roles/order', 'RoleController@order');

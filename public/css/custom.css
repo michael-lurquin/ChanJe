@@ -1,0 +1,7 @@
+.ui-sortable-placeholder { border: 1px dashed #aaa }
+#table-sortable > tbody > tr > td.draggable > i { color: #777 }
+#table-sortable > tbody > tr > td.draggable:hover { cursor: pointer }
+#table-sortable > thead > tr > th { border-top: 1px solid #ddd }
+#table-sortable > tbody > tr > td { vertical-align: middle }
+#table-sortable > tbody > tr > td:first-child { text-align: center }
+div.fixed-table-container { border: 0 }
