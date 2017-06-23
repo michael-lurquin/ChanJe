@@ -5,7 +5,7 @@
         <div class="panel-body">
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 {!! Form::label('name', 'Nom', ['class' => 'control-label']) !!}
-                {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
+                {!! Form::text('name', old('name'), ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
 
                 @if ( $errors->has('name') )
                     <span class="help-block">
