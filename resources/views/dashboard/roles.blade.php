@@ -16,7 +16,7 @@
         </div>
         <div class="panel-footer">
             {!! Form::submit('Enregistrer', ['class' => 'btn btn-success']) !!}
-            <button type="button" class="btn btn-default pull-right" id="btn-role-edition-cancel" style="display:none">
+            <button type="button" class="btn btn-default pull-right" id="btn-role-edition-cancel" style="display:none" data-toggle="tooltip" data-placement="bottom" title="Annuler la modification">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
         </div>
@@ -50,11 +50,11 @@
                             <td>{{ $role->created_at->format('d/m/Y à H:i') }}</td>
                             <td>{{ $role->updated_at->format('d/m/Y à H:i') }}</td>
                             <td>
-                                <button type="button" data-url="{{ action('RoleController@update', $role) }}" data-name="{{ $role->name }}" class="btn btn-primary btn-role-edit">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Modifier
+                                <button type="button" data-url="{{ action('RoleController@update', $role) }}" data-name="{{ $role->name }}" class="btn btn-primary btn-role-edit" data-toggle="tooltip" data-placement="bottom" title="Modifier le rôle">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-{{ $role->id }}">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Supprimer
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-{{ $role->id }}" data-placement="bottom" title="Supprimer le rôle">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
                                 </button>
                                 {!! Form::hidden('id[]', $role->id, ['class' => 'form-control', 'placeholder' => 'id']) !!}
                             </td>
